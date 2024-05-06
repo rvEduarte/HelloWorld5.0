@@ -15,7 +15,7 @@ public class TrialComputer : MonoBehaviour
     string b = null;
     string c = null;
 
-    int counter = 3;
+    int counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,27 +26,40 @@ public class TrialComputer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (counter == 1)
+        {
+            Debug.Log("WLHELLO_COUNTER3");
+            //canvasText.text = helloWriteLine;
+            //counter++;
+        }
+        if (counter == 2)
+        {
+            Debug.Log("WLHELLO_COUNTER2");
+            //counter++;
+        }
+        if (counter == 3)
+        {
+            Debug.Log("WLHELLO_COUNTER1");
+            //counter++;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("ENTER BULLET TITE");
         //if the game object we collided with is not equal to the current game object (so anything other than itself)
-        if (collision.gameObject.tag == "WLHELLO")
+        if (collision.gameObject.tag == "WHELLO")
         {
-            if(counter == 3)
-            {
-                canvasText.text = helloWriteLine;
-                counter--;
-            }
-            if(counter == 2)
-            {
-
-            }
+            Debug.Log("ENTER W__HELLO");
+            counter++;
             //canvasText.text = "\nPEPE ";
-            canvasText.text += helloWriteLine;
-            canvasText.text = helloWriteLine+"Helloworld";
+            //canvasText.text += helloWriteLine;
+            //canvasText.text = helloWriteLine+"Helloworld";
+            //counter++;
+        }
+        else if(collision.gameObject.tag == "WLHELLO")
+        {
+            Debug.Log("ENTER WL__HELLO");
             counter++;
         }
     }

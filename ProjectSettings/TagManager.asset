@@ -6,6 +6,7 @@ TagManager:
   tags:
   - helloworld
   - WLHELLO
+  - WHELLO
   layers:
   - Default
   - TransparentFX
