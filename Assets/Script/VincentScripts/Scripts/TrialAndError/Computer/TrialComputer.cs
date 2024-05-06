@@ -11,6 +11,12 @@ public class TrialComputer : MonoBehaviour
 
     string helloWriteLine = "HelloWorld";
 
+    string a = null;
+    string b = null;
+    string c = null;
+
+    int counter = 3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +35,19 @@ public class TrialComputer : MonoBehaviour
         //if the game object we collided with is not equal to the current game object (so anything other than itself)
         if (collision.gameObject.tag == "WLHELLO")
         {
+            if(counter == 3)
+            {
+                canvasText.text = helloWriteLine;
+                counter--;
+            }
+            if(counter == 2)
+            {
+
+            }
             //canvasText.text = "\nPEPE ";
             canvasText.text += helloWriteLine;
             canvasText.text = helloWriteLine+"Helloworld";
+            counter++;
         }
     }
 }
