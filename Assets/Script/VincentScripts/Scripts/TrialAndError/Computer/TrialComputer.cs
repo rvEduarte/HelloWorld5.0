@@ -30,7 +30,8 @@ public class TrialComputer : MonoBehaviour
         if (collision.gameObject.tag == "WLHELLO")
         {
             //canvasText.text = "\nPEPE ";
-            canvasText.text = helloWriteLine;
+            canvasText.text += helloWriteLine;
+            canvasText.text = helloWriteLine+"Helloworld";
         }
     }
 }
