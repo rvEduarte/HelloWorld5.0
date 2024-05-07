@@ -22,27 +22,27 @@ public class TrialDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
+       // Debug.Log("OnBeginDrag");
         canvasGroup2.alpha = .6f;
         canvasGroup2.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("OnDrag");
+       // Debug.Log("OnDrag");
         rectTransform2.anchoredPosition += eventData.delta;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
+        //Debug.Log("OnEndDrag");
         canvasGroup2.alpha = 1f;
         canvasGroup2.blocksRaycasts = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
+        //Debug.Log("OnPointerDown");
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)
@@ -53,7 +53,7 @@ public class TrialDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("ENTERWORLD");
+        //Debug.Log("ENTERWORLD");
         //if the game object we collided with is not equal to the current game object (so anything other than itself)
         if (collision.gameObject.tag == "Player")
         {
