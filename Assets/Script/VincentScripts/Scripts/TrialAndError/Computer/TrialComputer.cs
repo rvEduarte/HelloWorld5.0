@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Drawing;
 
 public class TrialComputer : MonoBehaviour
 {
@@ -43,16 +44,35 @@ public class TrialComputer : MonoBehaviour
             if(a == "HELLOWORLD")
             {
                 myObj.Name = "HELLOWORLD";
-                canvasText.text = "" + myObj.Name;
+                string color = "#18eded";
+                canvasText.text = "" + "<color=" + color + ">" + myObj.Name + "</color>";
                 TITE = myObj.Name;
             }
-            if(a == "7")
+
+            else if(a == "7")
             {
                 myObj.Name = "7";
-                canvasText.text = "" + myObj.Name;
+                string color = "#18eded";
+                canvasText.text = "" + "<color=" + color + ">" + myObj.Name + "</color>";
                 TITE = myObj.Name;
             }
-            
+
+            else if(a == "SPACE_HELLOWORLD")
+            {
+                myObj.Name = "\nHELLOWORLD";
+                string color = "#18eded";
+                canvasText.text = "" + "<color=" + color + ">" + myObj.Name + "</color>";
+                TITE = myObj.Name;
+            }
+
+            else if (a == "SPACE_7")
+            {
+                myObj.Name = "\n7";
+                string color = "#18eded";
+                canvasText.text = "" + "<color=" + color + ">" + myObj.Name + "</color>";
+                TITE = myObj.Name;
+            }
+
         }
         if (counter == 2)
         {
@@ -68,14 +88,31 @@ public class TrialComputer : MonoBehaviour
                 //canvasText.text = "" + TITE + "<color=" + color + ">HELLOWORLD</color>";
             }
 
-            if(a == "7")
+            else if(a == "7")
             {
                 myObj.Name1 = "7";
                 PEPE = myObj.Name1;
                 //canvasText.color = Color.red;
                 string color = "#18eded";
                 canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
+            }
 
+            else if (a == "SPACE_HELLOWORLD")
+            {
+                myObj.Name1 = "\nHELLOWORLD";
+                PEPE = myObj.Name1;
+                //canvasText.color = Color.red;
+                string color = "#18eded";
+                canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
+            }
+
+            else if (a == "SPACE_7")
+            {
+                myObj.Name1 = "\n7";
+                PEPE = myObj.Name1;
+                //canvasText.color = Color.red;
+                string color = "#18eded";
+                canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
             }
 
         }
@@ -86,18 +123,39 @@ public class TrialComputer : MonoBehaviour
                 myObj.Name2 = "HELLOWORLD";
                 TEPE = myObj.Name2;
                 //canvasText.color = Color.red;
-                string color = "#42f56c";
-                canvasText.text = "" + TITE + PEPE +"<color=" + color + ">" + TEPE + "</color>";
+                string color2 = "#03960f";
+                string color = "#18eded";
+                canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
             }
 
-            if (a == "7")
+            else if (a == "7")
             {
                 myObj.Name2 = "7";
                 TEPE = myObj.Name2;
                 //canvasText.color = Color.red;
+                string color2 = "#03960f";
                 string color = "#18eded";
-                canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>";
+                canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
 
+            }
+
+            else if (a == "SPACE_HELLOWORLD")
+            {
+                myObj.Name2 = "\nHELLOWORLD";
+                TEPE = myObj.Name2;
+                //canvasText.color = Color.red;
+                string color2 = "#03960f";
+                string color = "#18eded";
+                canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
+            }
+            else if (a == "SPACE_7")
+            {
+                myObj.Name2 = "\n7";
+                TEPE = myObj.Name2;
+                //canvasText.color = Color.red;
+                string color2 = "#03960f";
+                string color = "#18eded";
+                canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
             }
         }
     }
@@ -121,7 +179,7 @@ public class TrialComputer : MonoBehaviour
         else if(collision.gameObject.tag == "WLHELLO")
         {
             Debug.Log("ENTER WL__HELLO");
-            a = "7";
+            a = "SPACE_HELLOWORLD";
             counter++;
         }
 
@@ -129,6 +187,13 @@ public class TrialComputer : MonoBehaviour
         {
             Debug.Log("ENTER W__7");
             a = "7";
+            counter++;
+        }
+
+        else if (collision.gameObject.tag == "WL7")
+        {
+            Debug.Log("ENTER W__7");
+            a = "SPACE_7";
             counter++;
         }
     }
