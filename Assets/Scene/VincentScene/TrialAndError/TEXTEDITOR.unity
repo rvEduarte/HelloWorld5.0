@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 1188997067}
   - component: {fileID: 1188997066}
   m_Layer: 0
-  m_Name: 'blasterWLHELLO '
+  m_Name: blasterW7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

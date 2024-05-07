@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6295661267360057945}
   - component: {fileID: 2097653927073328719}
   m_Layer: 0
-  m_Name: bulletWLHELLO
-  m_TagString: WLHELLO
+  m_Name: bulletW7
+  m_TagString: W7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

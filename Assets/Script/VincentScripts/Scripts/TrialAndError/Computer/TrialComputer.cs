@@ -19,8 +19,8 @@ public class TrialComputer : MonoBehaviour
     int counter = 0;
 
     string TITE = null;
-    //string TITE1 = null;
     string PEPE = null;
+    string TEPE = null;
 
     // Start is called before the first frame update
     void Start()
@@ -42,20 +42,15 @@ public class TrialComputer : MonoBehaviour
 
             if(a == "HELLOWORLD")
             {
-                //Person myObj = new Person();
-                myObj.Name = "HELLOWORLDick";
+                myObj.Name = "HELLOWORLD";
                 canvasText.text = "" + myObj.Name;
-                //myObj.Name = TITE;
                 TITE = myObj.Name;
-                //Person myObj = new Person();
-                //myObj.Name = "Liam";
-                //Console.WriteLine(myObj.Name);
             }
             if(a == "7")
             {
                 myObj.Name = "7";
                 canvasText.text = "" + myObj.Name;
-                myObj.Name = TITE;
+                TITE = myObj.Name;
             }
             
         }
@@ -65,25 +60,45 @@ public class TrialComputer : MonoBehaviour
             if (a == "HELLOWORLD")
             {
                 Debug.Log("KARL_TITE");
-                //b = "HELLOWORLD";
-
-                canvasText.text = "" + TITE;
+                myObj.Name1 = "HELLOWORLD";
+                PEPE = myObj.Name1;
+                //canvasText.color = Color.red;
+                string color = "#18eded";
+                canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
+                //canvasText.text = "" + TITE + "<color=" + color + ">HELLOWORLD</color>";
             }
 
             if(a == "7")
             {
                 myObj.Name1 = "7";
-                //canvasText.text = "" + myObj.Name1;
-                //myObj.Name1 = PEPE;
                 PEPE = myObj.Name1;
-                canvasText.text = "" + TITE + PEPE;
+                //canvasText.color = Color.red;
+                string color = "#18eded";
+                canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
+
             }
 
         }
         if (counter == 3)
         {
-            Debug.Log("WLHELLO_COUNTER1");
-            canvasText.text = "" + a + b + c;
+            if (a == "HELLOWORLD")
+            {
+                myObj.Name2 = "HELLOWORLD";
+                TEPE = myObj.Name2;
+                //canvasText.color = Color.red;
+                string color = "#42f56c";
+                canvasText.text = "" + TITE + PEPE +"<color=" + color + ">" + TEPE + "</color>";
+            }
+
+            if (a == "7")
+            {
+                myObj.Name2 = "7";
+                TEPE = myObj.Name2;
+                //canvasText.color = Color.red;
+                string color = "#18eded";
+                canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>";
+
+            }
         }
     }
 
@@ -106,6 +121,13 @@ public class TrialComputer : MonoBehaviour
         else if(collision.gameObject.tag == "WLHELLO")
         {
             Debug.Log("ENTER WL__HELLO");
+            a = "7";
+            counter++;
+        }
+
+        else if (collision.gameObject.tag == "W7")
+        {
+            Debug.Log("ENTER W__7");
             a = "7";
             counter++;
         }
@@ -139,5 +161,11 @@ class Person
     {
         get { return name1; }
         set { name1 = value; }
+    }
+    private string name2;
+    public string Name2   // property
+    {
+        get { return name2; }
+        set { name2 = value; }
     }
 }
