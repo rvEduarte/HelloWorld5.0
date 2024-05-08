@@ -18,6 +18,15 @@ public class TrialButtonCircle : MonoBehaviour
     public CanvasRenderer yourString;
     //public CanvasRenderer yourX;
 
+    public CanvasRenderer yourText1;
+    public CanvasRenderer yourText2;
+    public CanvasRenderer yourText3;
+    public CanvasRenderer yourText4;
+    public CanvasRenderer yourText5;
+    public CanvasRenderer yourText6;
+
+    public CanvasRenderer yourPanel;
+    public CanvasRenderer yourHint;
 
     public bool clicked = true;
     public bool condition;
@@ -59,10 +68,34 @@ public class TrialButtonCircle : MonoBehaviour
             CanvasRenderer canvasRenderer8 = yourString.GetComponent<CanvasRenderer>();
             canvasRenderer8.cull = true;
 
-           // CanvasRenderer canvasRenderer999 = yourX.GetComponent<CanvasRenderer>();
+            // CanvasRenderer canvasRenderer999 = yourX.GetComponent<CanvasRenderer>();
             //canvasRenderer999.cull = true;
+
+            CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
+            canvasRenderer9.cull = true;
+
+            CanvasRenderer canvasRenderer10 = yourText2.GetComponent<CanvasRenderer>();
+            canvasRenderer10.cull = true;
+
+            CanvasRenderer canvasRenderer11 = yourText3.GetComponent<CanvasRenderer>();
+            canvasRenderer11.cull = true;
+
+            CanvasRenderer canvasRenderer12 = yourText4.GetComponent<CanvasRenderer>();
+            canvasRenderer12.cull = true;
+
+            CanvasRenderer canvasRenderer13 = yourText5.GetComponent<CanvasRenderer>();
+            canvasRenderer13.cull = true;
+
+            CanvasRenderer canvasRenderer14 = yourText6.GetComponent<CanvasRenderer>();
+            canvasRenderer14.cull = true;
+
+            CanvasRenderer canvasRenderer15 = yourPanel.GetComponent<CanvasRenderer>();
+            canvasRenderer15.cull = true;
+
+            CanvasRenderer canvasRenderer16 = yourHint.GetComponent<CanvasRenderer>();
+            canvasRenderer16.cull = true;
         }
-        else if(clicked == false)
+        else if (clicked == false)
         {
             Debug.Log("SHOW");
             CanvasRenderer canvasRenderer1 = yourDraggable1.GetComponent<CanvasRenderer>();
@@ -91,6 +124,30 @@ public class TrialButtonCircle : MonoBehaviour
 
             //CanvasRenderer canvasRenderer999 = yourX.GetComponent<CanvasRenderer>();
             //canvasRenderer999.cull = false;
+
+            CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
+            canvasRenderer9.cull = false;
+
+            CanvasRenderer canvasRenderer10 = yourText2.GetComponent<CanvasRenderer>();
+            canvasRenderer10.cull = false;
+
+            CanvasRenderer canvasRenderer11 = yourText3.GetComponent<CanvasRenderer>();
+            canvasRenderer11.cull = false;
+
+            CanvasRenderer canvasRenderer12 = yourText4.GetComponent<CanvasRenderer>();
+            canvasRenderer12.cull = false;
+
+            CanvasRenderer canvasRenderer13 = yourText5.GetComponent<CanvasRenderer>();
+            canvasRenderer13.cull = false;
+
+            CanvasRenderer canvasRenderer14 = yourText6.GetComponent<CanvasRenderer>();
+            canvasRenderer14.cull = false;
+
+            CanvasRenderer canvasRenderer15 = yourPanel.GetComponent<CanvasRenderer>();
+            canvasRenderer15.cull = false;
+
+            CanvasRenderer canvasRenderer16 = yourHint.GetComponent<CanvasRenderer>();
+            canvasRenderer16.cull = false;
         }
 
         

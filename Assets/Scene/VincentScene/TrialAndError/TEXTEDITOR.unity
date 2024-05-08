@@ -1395,6 +1395,7 @@ GameObject:
   - component: {fileID: 1498889152}
   - component: {fileID: 1498889154}
   - component: {fileID: 1498889153}
+  - component: {fileID: 1498889155}
   m_Layer: 5
   m_Name: HINT_BUTTON
   m_TagString: Untagged
@@ -1457,6 +1458,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498889151}
   m_CullTransparentMesh: 1
+--- !u!114 &1498889155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498889151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9b212449b7a2241a69e6618725b20e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisablePanel: {fileID: 1767131835}
 --- !u!1 &1517576907
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,6 +5394,14 @@ MonoBehaviour:
   yourDrop2: {fileID: 5928276068634763692}
   yourCanvas: {fileID: 8574930579956793669}
   yourString: {fileID: 5692251533004281385}
+  yourText1: {fileID: 397735398}
+  yourText2: {fileID: 1438080726}
+  yourText3: {fileID: 1517576910}
+  yourText4: {fileID: 234031964}
+  yourText5: {fileID: 564856350}
+  yourText6: {fileID: 1658691061}
+  yourPanel: {fileID: 1767131838}
+  yourHint: {fileID: 1498889154}
   clicked: 0
   condition: 0
 --- !u!222 &2231701794685671905
