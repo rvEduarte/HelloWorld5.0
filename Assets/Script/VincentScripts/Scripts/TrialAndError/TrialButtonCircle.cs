@@ -18,6 +18,7 @@ public class TrialButtonCircle : MonoBehaviour
     public CanvasRenderer yourString;
     //public CanvasRenderer yourX;
 
+
     public bool clicked = true;
     public bool condition;
 
