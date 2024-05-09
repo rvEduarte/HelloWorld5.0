@@ -21,6 +21,10 @@ public class TrialComputer : MonoBehaviour
 
     public CounterCount Counter1;
 
+    public GameObject Laser1;
+    public GameObject Laser2;
+    public GameObject Laser3;
+
     string TITE = null;
     string PEPE = null;
     string TEPE = null;
@@ -67,6 +71,8 @@ public class TrialComputer : MonoBehaviour
                 string color = "#18eded";
                 canvasText.text = "" + "<color=" + color + ">" + myObj.Name + "</color>";
                 TITE = myObj.Name;
+
+                Laser1.SetActive(false);
             }
 
             else if (a == "SPACE_7")
@@ -117,6 +123,8 @@ public class TrialComputer : MonoBehaviour
                 //canvasText.color = Color.red;
                 string color = "#18eded";
                 canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
+
+                Laser2.SetActive(false);
             }
 
         }
@@ -132,6 +140,8 @@ public class TrialComputer : MonoBehaviour
                 string color2 = "#03960f";
                 string color = "#18eded";
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
+
+                Laser1.SetActive(false);
 
                 //MOVE THE COLLIDER TO BOTTOM
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
@@ -201,6 +211,10 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
 
+                Laser1.SetActive(true);
+                Laser2.SetActive(true);
+                Laser3.SetActive(true);
+
                 canvasText.text = "__";
                 Counter1.counter = 0;
             }
@@ -211,6 +225,22 @@ public class TrialComputer : MonoBehaviour
             Debug.Log("ENTER WL__HELLO");
             a = "SPACE_HELLOWORLD";
             Counter1.counter++;
+
+            if (Counter1.counter == 4)
+            {
+                Debug.Log("SUPER_FUCK");
+
+                //MOVE THE COLLIDER TO TOP
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
+
+                Laser1.SetActive(true);
+                Laser2.SetActive(true);
+                Laser3.SetActive(true);
+
+                canvasText.text = "__";
+                Counter1.counter = 0;
+            }
         }
 
         else if (collision.gameObject.tag == "W7")
@@ -218,6 +248,22 @@ public class TrialComputer : MonoBehaviour
             Debug.Log("ENTER W__7");
             a = "7";
             Counter1.counter++;
+
+            if (Counter1.counter == 4)
+            {
+                Debug.Log("SUPER_FUCK");
+
+                //MOVE THE COLLIDER TO TOP
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
+
+                Laser1.SetActive(true);
+                Laser2.SetActive(true);
+                Laser3.SetActive(true);
+
+                canvasText.text = "__";
+                Counter1.counter = 0;
+            }
         }
 
         else if (collision.gameObject.tag == "WL7")
@@ -225,6 +271,22 @@ public class TrialComputer : MonoBehaviour
             Debug.Log("ENTER W__7");
             a = "SPACE_7";
             Counter1.counter++;
+
+            if (Counter1.counter == 4)
+            {
+                Debug.Log("SUPER_FUCK");
+
+                //MOVE THE COLLIDER TO TOP
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
+
+                Laser1.SetActive(true);
+                Laser2.SetActive(true);
+                Laser3.SetActive(true);
+
+                canvasText.text = "__";
+                Counter1.counter = 0;
+            }
         }
     }
 }
