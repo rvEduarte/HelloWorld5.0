@@ -61,9 +61,6 @@ public class TrialDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
             Gunportal.gameObject.SetActive(true);
         }
     }
-
-
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

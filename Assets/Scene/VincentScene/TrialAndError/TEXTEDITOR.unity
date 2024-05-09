@@ -442,6 +442,8 @@ MonoBehaviour:
   Laser1: {fileID: 1900138152}
   Laser2: {fileID: 1590893476}
   Laser3: {fileID: 26011821}
+  RedAlarm: {fileID: 0}
+  BlueAlarm: {fileID: 0}
 --- !u!1 &234031961
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +855,8 @@ MonoBehaviour:
   Laser1: {fileID: 0}
   Laser2: {fileID: 0}
   Laser3: {fileID: 0}
+  RedAlarm: {fileID: 0}
+  BlueAlarm: {fileID: 0}
 --- !u!1 &397735395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,28 +1671,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1041687843}
   - component: {fileID: 1041687842}
-  - component: {fileID: 1041687841}
-  - component: {fileID: 1041687845}
   m_Layer: 0
-  m_Name: ResetButton
+  m_Name: RedAlarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1041687841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041687840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc0db4d9713720c49b97bccbf7ed7eac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Counter1: {fileID: 1041687845}
+  m_IsActive: 0
 --- !u!212 &1041687842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1756,19 +1745,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1041687845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041687840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 400ac2c7b739f0643919da5ca2a82ab2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counter: 0
 --- !u!1 &1051821590
 GameObject:
   m_ObjectHideFlags: 0
