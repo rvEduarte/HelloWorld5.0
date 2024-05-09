@@ -25,6 +25,11 @@ public class TrialComputer : MonoBehaviour
     public GameObject Laser2;
     public GameObject Laser3;
 
+    public bool L1;
+    public bool L2;
+    public bool L3;
+
+
     public GameObject RedAlarm;
     public GameObject BlueAlarm;
 
@@ -76,6 +81,7 @@ public class TrialComputer : MonoBehaviour
                 TITE = myObj.Name;
 
                 Laser1.SetActive(false);
+                L1 = false;
             }
 
             else if (a == "SPACE_7")
@@ -128,6 +134,7 @@ public class TrialComputer : MonoBehaviour
                 canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
 
                 Laser2.SetActive(false);
+                L2 = false;
             }
 
         }
@@ -145,15 +152,13 @@ public class TrialComputer : MonoBehaviour
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
 
                 Laser3.SetActive(false);
+                L3 = false;
 
                 //MOVE THE COLLIDER TO BOTTOM
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
-                if (Laser1 && Laser2 && Laser3 == false)
-                {
-                    Debug.Log("SUPER PEKPEK");
-                }
+                
             }
 
             else if (a == "7")
@@ -198,11 +203,16 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
             }
-         
-            else
-            {
-                Debug.Log("SUPER BETLOG");
-            }
+
+            
+        }
+        else if (L2 == false)
+        {
+            Debug.Log("SUPER PEKPEK");
+        }
+        else
+        {
+            Debug.Log("SUPER BETLOG");
         }
     }
      

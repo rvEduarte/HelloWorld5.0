@@ -442,8 +442,11 @@ MonoBehaviour:
   Laser1: {fileID: 1900138152}
   Laser2: {fileID: 1590893476}
   Laser3: {fileID: 26011821}
-  RedAlarm: {fileID: 0}
-  BlueAlarm: {fileID: 0}
+  L1: 1
+  L2: 1
+  L3: 1
+  RedAlarm: {fileID: 1041687840}
+  BlueAlarm: {fileID: 802650966}
 --- !u!1 &234031961
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +858,9 @@ MonoBehaviour:
   Laser1: {fileID: 0}
   Laser2: {fileID: 0}
   Laser3: {fileID: 0}
+  L1: 1
+  L2: 1
+  L3: 1
   RedAlarm: {fileID: 0}
   BlueAlarm: {fileID: 0}
 --- !u!1 &397735395
