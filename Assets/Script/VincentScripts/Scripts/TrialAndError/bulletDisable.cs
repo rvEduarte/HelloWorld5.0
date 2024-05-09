@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class bulletDisable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject bullet1;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         
-    }
+        if (collision.gameObject.tag == "GROUNDER")
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            Destroy(gameObject);
+        }
     }
 }

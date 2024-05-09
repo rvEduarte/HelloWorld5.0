@@ -141,7 +141,7 @@ public class TrialComputer : MonoBehaviour
                 string color = "#18eded";
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
 
-                Laser1.SetActive(false);
+                Laser3.SetActive(false);
 
                 //MOVE THE COLLIDER TO BOTTOM
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
