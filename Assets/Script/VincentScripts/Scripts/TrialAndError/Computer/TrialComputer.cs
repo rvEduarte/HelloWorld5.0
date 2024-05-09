@@ -11,13 +11,15 @@ public class TrialComputer : MonoBehaviour
     private GameObject bulletHelloWrite;
     public TMP_Text canvasText;
 
-    string helloWriteLine = "HelloWorld";
+    public GameObject resetCounter;
+
+    public BoxCollider2D disableBox2d;
 
     string a = null;
-    string b = null;
-    string c = null;
 
-    int counter = 0;
+    //int counter = 0;
+
+    public CounterCount Counter1;
 
     string TITE = null;
     string PEPE = null;
@@ -26,6 +28,8 @@ public class TrialComputer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2 (-9, 0);
+        disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
         
     }
 
@@ -35,7 +39,7 @@ public class TrialComputer : MonoBehaviour
         Person myObj = new Person();
         
 
-        if (counter == 1)
+        if (Counter1.counter == 1)
         {
             Debug.Log("WLHELLO_COUNTER3");
             //canvasText.text = helloWriteLine;
@@ -74,7 +78,7 @@ public class TrialComputer : MonoBehaviour
             }
 
         }
-        if (counter == 2)
+        if (Counter1.counter == 2)
         {
             Debug.Log("WLHELLO_COUNTER2");
             if (a == "HELLOWORLD")
@@ -116,8 +120,10 @@ public class TrialComputer : MonoBehaviour
             }
 
         }
-        if (counter == 3)
+        if (Counter1.counter == 3)
         {
+            //disableBox2d.GetComponent<BoxCollider2D>().enabled = true;
+
             if (a == "HELLOWORLD")
             {
                 myObj.Name2 = "HELLOWORLD";
@@ -126,6 +132,10 @@ public class TrialComputer : MonoBehaviour
                 string color2 = "#03960f";
                 string color = "#18eded";
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
+
+                //MOVE THE COLLIDER TO BOTTOM
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
             }
 
             else if (a == "7")
@@ -137,6 +147,10 @@ public class TrialComputer : MonoBehaviour
                 string color = "#18eded";
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
 
+                //MOVE THE COLLIDER TO BOTTOM
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
+
             }
 
             else if (a == "SPACE_HELLOWORLD")
@@ -147,6 +161,10 @@ public class TrialComputer : MonoBehaviour
                 string color2 = "#03960f";
                 string color = "#18eded";
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
+
+                //MOVE THE COLLIDER TO BOTTOM
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
             }
             else if (a == "SPACE_7")
             {
@@ -156,10 +174,15 @@ public class TrialComputer : MonoBehaviour
                 string color2 = "#03960f";
                 string color = "#18eded";
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
+
+                //MOVE THE COLLIDER TO BOTTOM
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
+
             }
         }
     }
-
+     
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("ENTER BULLET TITE");
@@ -168,48 +191,42 @@ public class TrialComputer : MonoBehaviour
         {
             Debug.Log("ENTER W__HELLO");
             a = "HELLOWORLD";
-            
-            
-            
-            //b = "HELLOWORLD";
-            //c = "HELLOWORLD";
-            counter++;
+            Counter1.counter++;
+
+            if (Counter1.counter == 4)
+            {
+                Debug.Log("SUPER_FUCK");
+
+                //MOVE THE COLLIDER TO TOP
+                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
+                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
+
+                canvasText.text = "__";
+                Counter1.counter = 0;
+            }
             
         }
         else if(collision.gameObject.tag == "WLHELLO")
         {
             Debug.Log("ENTER WL__HELLO");
             a = "SPACE_HELLOWORLD";
-            counter++;
+            Counter1.counter++;
         }
 
         else if (collision.gameObject.tag == "W7")
         {
             Debug.Log("ENTER W__7");
             a = "7";
-            counter++;
+            Counter1.counter++;
         }
 
         else if (collision.gameObject.tag == "WL7")
         {
             Debug.Log("ENTER W__7");
             a = "SPACE_7";
-            counter++;
+            Counter1.counter++;
         }
     }
-
-    /*private void OnTriggerExit2D(Collider2D collision)
-    {
-        Debug.Log("EXIT BULLET TITE");
-        //if the game object we collided with is not equal to the current game object (so anything other than itself)
-        if (collision.gameObject.tag == "WHELLO")
-        {
-            Debug.Log("EXIT W__HELLO");
-            b = null;
-            c = null;
-
-        }
-    }*/
 }
 
 class Person
