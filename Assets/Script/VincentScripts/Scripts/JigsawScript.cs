@@ -15,7 +15,7 @@ public class JigsawScript : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        pickUpText.gameObject.SetActive(false);
+        pickUpText.SetActive(false);
         Greenportal.SetActive(false);
     }
 
@@ -30,7 +30,7 @@ public class JigsawScript : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player"))
         {
-            pickUpText.gameObject.SetActive(true);
+            pickUpText.SetActive(true);
             pickUpAllowed = true;
         }
     }
@@ -40,7 +40,7 @@ public class JigsawScript : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             
-            pickUpText.gameObject.SetActive(false);
+            pickUpText.SetActive(false);
             pickUpAllowed = false;
         }
     }
