@@ -25,6 +25,9 @@ public class TrialComputer : MonoBehaviour
     public GameObject Laser2;
     public GameObject Laser3;
 
+    public GameObject RedAlarm;
+    public GameObject BlueAlarm;
+
     string TITE = null;
     string PEPE = null;
     string TEPE = null;
@@ -146,6 +149,11 @@ public class TrialComputer : MonoBehaviour
                 //MOVE THE COLLIDER TO BOTTOM
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
+
+                if (Laser1 && Laser2 && Laser3 == false)
+                {
+                    Debug.Log("SUPER PEKPEK");
+                }
             }
 
             else if (a == "7")
@@ -189,6 +197,11 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
+            }
+         
+            else
+            {
+                Debug.Log("SUPER BETLOG");
             }
         }
     }
