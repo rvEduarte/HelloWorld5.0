@@ -11,13 +11,9 @@ public class TrialComputer : MonoBehaviour
     private GameObject bulletHelloWrite;
     public TMP_Text canvasText;
 
-    public GameObject resetCounter;
-
     public BoxCollider2D disableBox2d;
 
     string a = null;
-
-    //int counter = 0;
 
     public CounterCount Counter1;
 
@@ -29,8 +25,6 @@ public class TrialComputer : MonoBehaviour
     public bool L2;
     public bool L3;
 
-
-    public GameObject RedAlarm;
     public GameObject BlueAlarm;
 
     string TITE = null;
@@ -202,17 +196,7 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
-            }
-
-            
-        }
-        else if (L2 == false)
-        {
-            Debug.Log("SUPER PEKPEK");
-        }
-        else
-        {
-            Debug.Log("SUPER BETLOG");
+            }          
         }
     }
      
@@ -226,6 +210,10 @@ public class TrialComputer : MonoBehaviour
             a = "HELLOWORLD";
             Counter1.counter++;
 
+            if(L1 && L2 && L3 == false)
+            {
+                BlueAlarm.SetActive(false);
+            }
             if (Counter1.counter == 4)
             {
                 Debug.Log("SUPER_FUCK");
@@ -237,6 +225,8 @@ public class TrialComputer : MonoBehaviour
                 Laser1.SetActive(true);
                 Laser2.SetActive(true);
                 Laser3.SetActive(true);
+
+                BlueAlarm.SetActive(true);
 
                 canvasText.text = "__";
                 Counter1.counter = 0;
