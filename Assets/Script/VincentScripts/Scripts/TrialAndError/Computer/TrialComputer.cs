@@ -31,9 +31,9 @@ public class TrialComputer : MonoBehaviour
     string secondText = null;
     string thirdText = null;
 
-    string TITE = null;
-    string PEPE = null;
-    string TEPE = null;
+    //string TITE = null;
+    //string PEPE = null;
+    //string TEPE = null;
 
     // Start is called before the first frame update
     void Start()
@@ -80,7 +80,7 @@ public class TrialComputer : MonoBehaviour
 
                 Laser1.SetActive(false);
                 BoolLaser1.La1 = false;
-                TITE = "L1";
+                //TITE = "L1";
             }
 
             else if (a == "SPACE_7")
@@ -134,7 +134,7 @@ public class TrialComputer : MonoBehaviour
 
                 Laser2.SetActive(false);
                 BoolLaser2.La2 = false;
-                PEPE = "L2";
+                //PEPE = "L1";
             }
 
         }
@@ -153,13 +153,25 @@ public class TrialComputer : MonoBehaviour
 
                 Laser3.SetActive(false);
                 BoolLaser3.La3 = false;
-                TEPE = "L3";
+                //TEPE = "L1";
 
                 //MOVE THE COLLIDER TO BOTTOM
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
-                
+                if(BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+               // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
+                {
+                    Debug.Log("KANTOTERO");
+                    disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(0, (float)-15.56);
+                    disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2(1, 1);
+                }
+                else
+                {
+                    Debug.Log("HINDE__KANTOTERO");
+                    BlueAlarm.SetActive(false);
+                }
+
             }
 
             else if (a == "7")
@@ -175,6 +187,18 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
+                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
+                {
+                    Debug.Log("KANTOTERO");
+                    
+                }
+                else
+                {
+                    Debug.Log("HINDE__KANTOTERO");
+                    BlueAlarm.SetActive(false);
+                }
+
             }
 
             else if (a == "SPACE_HELLOWORLD")
@@ -189,6 +213,18 @@ public class TrialComputer : MonoBehaviour
                 //MOVE THE COLLIDER TO BOTTOM
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
+
+                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
+                {
+                    Debug.Log("KANTOTERO");
+                    
+                }
+                else
+                {
+                    Debug.Log("HINDE__KANTOTERO");
+                    BlueAlarm.SetActive(false);
+                }
             }
             else if (a == "SPACE_7")
             {
@@ -203,10 +239,31 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
+                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
+                {
+                    Debug.Log("KANTOTERO");
+
+                }
+                else
+                {
+                    Debug.Log("HINDE__KANTOTERO");
+                    BlueAlarm.SetActive(false);
+                }
+
             }
-               
+            
+
         }
-        
+        /*else if (TITE.Equals(PEPE) && PEPE.Equals(TEPE))
+        {
+            Debug.Log("KANTOTERO");
+            BlueAlarm.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("HINDE__KANTOTERO");
+        }*/
 
     }
      
@@ -220,6 +277,7 @@ public class TrialComputer : MonoBehaviour
             a = "HELLOWORLD";
             Counter1.counter++;
 
+
             if (Counter1.counter == 4)
             {
                 Debug.Log("SUPER_FUCK");
@@ -231,6 +289,12 @@ public class TrialComputer : MonoBehaviour
                 Laser1.SetActive(true);
                 Laser2.SetActive(true);
                 Laser3.SetActive(true);
+
+                BoolLaser1.La1 = true;
+                BoolLaser2.La2 = true;
+                BoolLaser3.La3 = true;
+
+                BlueAlarm.SetActive(false);
 
                 //BlueAlarm.SetActive(true);
 
@@ -258,6 +322,12 @@ public class TrialComputer : MonoBehaviour
                 Laser2.SetActive(true);
                 Laser3.SetActive(true);
 
+                BoolLaser1.La1 = true;
+                BoolLaser2.La2 = true;
+                BoolLaser3.La3 = true;
+
+                BlueAlarm.SetActive(false);
+
                 canvasText.text = "__";
                 Counter1.counter = 0;
             }
@@ -280,6 +350,12 @@ public class TrialComputer : MonoBehaviour
                 Laser1.SetActive(true);
                 Laser2.SetActive(true);
                 Laser3.SetActive(true);
+
+                BoolLaser1.La1 = true;
+                BoolLaser2.La2 = true;
+                BoolLaser3.La3 = true;
+
+                BlueAlarm.SetActive(false);
 
                 canvasText.text = "__";
                 Counter1.counter = 0;
@@ -304,10 +380,18 @@ public class TrialComputer : MonoBehaviour
                 Laser2.SetActive(true);
                 Laser3.SetActive(true);
 
+                BoolLaser1.La1 = true;
+                BoolLaser2.La2 = true;
+                BoolLaser3.La3 = true;
+
+                BlueAlarm.SetActive(false);
+
                 canvasText.text = "__";
                 Counter1.counter = 0;
             }
         }
+
+        
     }
 }
 
