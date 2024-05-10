@@ -21,10 +21,6 @@ public class TrialComputer : MonoBehaviour
     public GameObject Laser2;
     public GameObject Laser3;
 
-    public bool L1;
-    public bool L2;
-    public bool L3;
-
     public GameObject BlueAlarm;
 
     string TITE = null;
@@ -75,7 +71,7 @@ public class TrialComputer : MonoBehaviour
                 TITE = myObj.Name;
 
                 Laser1.SetActive(false);
-                L1 = false;
+                //L1.La1 = false;
             }
 
             else if (a == "SPACE_7")
@@ -128,7 +124,7 @@ public class TrialComputer : MonoBehaviour
                 canvasText.text = "" + TITE + "<color=" + color + ">" + PEPE + "</color>";
 
                 Laser2.SetActive(false);
-                L2 = false;
+                //L2 = false;
             }
 
         }
@@ -146,7 +142,7 @@ public class TrialComputer : MonoBehaviour
                 canvasText.text = "" + TITE + PEPE + "<color=" + color + ">" + TEPE + "</color>" + "<color=" + color2 + ">\n\n\n...Program finished with exit code 0</color>";
 
                 Laser3.SetActive(false);
-                L3 = false;
+                //L3 = false;
 
                 //MOVE THE COLLIDER TO BOTTOM
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
@@ -210,10 +206,10 @@ public class TrialComputer : MonoBehaviour
             a = "HELLOWORLD";
             Counter1.counter++;
 
-            if(L1 && L2 && L3 == false)
-            {
-                BlueAlarm.SetActive(false);
-            }
+            //if(L1 && L2 && L3 == false)
+            //{
+               // BlueAlarm.SetActive(false);
+            //}
             if (Counter1.counter == 4)
             {
                 Debug.Log("SUPER_FUCK");
