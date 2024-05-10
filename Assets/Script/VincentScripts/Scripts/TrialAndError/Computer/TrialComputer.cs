@@ -31,10 +31,6 @@ public class TrialComputer : MonoBehaviour
     string secondText = null;
     string thirdText = null;
 
-    //string TITE = null;
-    //string PEPE = null;
-    //string TEPE = null;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -90,7 +86,6 @@ public class TrialComputer : MonoBehaviour
                 canvasText.text = "" + "<color=" + color + ">" + myObj.Name + "</color>";
                 firstText = myObj.Name;
             }
-
         }
         if (Counter1.counter == 2)
         {
@@ -136,7 +131,6 @@ public class TrialComputer : MonoBehaviour
                 BoolLaser2.La2 = false;
                 //PEPE = "L1";
             }
-
         }
         if (Counter1.counter == 3)
         {
@@ -159,7 +153,7 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
-                if(BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                if(BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
                // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
                 {
                     Debug.Log("KANTOTERO");
@@ -171,7 +165,6 @@ public class TrialComputer : MonoBehaviour
                     Debug.Log("HINDE__KANTOTERO");
                     BlueAlarm.SetActive(false);
                 }
-
             }
 
             else if (a == "7")
@@ -187,7 +180,7 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
-                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                if (BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
                 // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
                 {
                     Debug.Log("KANTOTERO");
@@ -198,7 +191,6 @@ public class TrialComputer : MonoBehaviour
                     Debug.Log("HINDE__KANTOTERO");
                     BlueAlarm.SetActive(false);
                 }
-
             }
 
             else if (a == "SPACE_HELLOWORLD")
@@ -214,11 +206,10 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
-                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                if (BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
                 // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
                 {
-                    Debug.Log("KANTOTERO");
-                    
+                    Debug.Log("KANTOTERO");             
                 }
                 else
                 {
@@ -239,32 +230,18 @@ public class TrialComputer : MonoBehaviour
                 disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2((float)-2.2, (float)-26.72);
                 disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)8.63, (float)9.63);
 
-                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                if (BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
                 // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
                 {
                     Debug.Log("KANTOTERO");
-
                 }
                 else
                 {
                     Debug.Log("HINDE__KANTOTERO");
                     BlueAlarm.SetActive(false);
                 }
-
-            }
-            
-
+            }      
         }
-        /*else if (TITE.Equals(PEPE) && PEPE.Equals(TEPE))
-        {
-            Debug.Log("KANTOTERO");
-            BlueAlarm.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("HINDE__KANTOTERO");
-        }*/
-
     }
      
     private void OnTriggerEnter2D(Collider2D collision)
@@ -277,25 +254,14 @@ public class TrialComputer : MonoBehaviour
             a = "HELLOWORLD";
             Counter1.counter++;
 
-
             if (Counter1.counter == 4)
             {
                 Debug.Log("SUPER_FUCK");
 
-                //MOVE THE COLLIDER TO TOP
-                
-
-               // BlueAlarm.SetActive(false);
-
-                //BlueAlarm.SetActive(true);
-
-                
-
-                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                if (BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
                 // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
                 {
                     Debug.Log("KANTOTERO");
-
                 }
                 else
                 {
@@ -315,12 +281,8 @@ public class TrialComputer : MonoBehaviour
 
                     canvasText.text = "__";
                     Counter1.counter = 0;
-                }
-
-                
-            }
-            
-
+                }            
+            }       
         }
         else if(collision.gameObject.tag == "WLHELLO")
         {
@@ -332,7 +294,7 @@ public class TrialComputer : MonoBehaviour
             {
                 Debug.Log("SUPER_FUCK");
 
-                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                if (BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
                 // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
                 {
                     Debug.Log("KANTOTERO");
@@ -370,11 +332,26 @@ public class TrialComputer : MonoBehaviour
             {
                 Debug.Log("SUPER_FUCK");
 
-                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
-                // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
+                if (BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
+               
                 {
                     Debug.Log("KANTOTERO");
 
+                    BlueAlarm.SetActive(true);
+
+                    disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
+                    disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
+
+                    Laser1.SetActive(true);
+                    Laser2.SetActive(true);
+                    Laser3.SetActive(true);
+
+                    BoolLaser1.La1 = true;
+                    BoolLaser2.La2 = true;
+                    BoolLaser3.La3 = true;
+
+                    canvasText.text = "__";
+                    Counter1.counter = 0;
                 }
                 else
                 {
@@ -394,6 +371,7 @@ public class TrialComputer : MonoBehaviour
 
                     canvasText.text = "__";
                     Counter1.counter = 0;
+
                 }
             }
         }
@@ -408,7 +386,7 @@ public class TrialComputer : MonoBehaviour
             {
                 Debug.Log("SUPER_FUCK");
 
-                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                if (BoolLaser1.La1 == false && BoolLaser2.La2 == false && BoolLaser3.La3 == false)
                 // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
                 {
                     Debug.Log("KANTOTERO");
@@ -434,9 +412,7 @@ public class TrialComputer : MonoBehaviour
                     Counter1.counter = 0;
                 }
             }
-        }
-
-        
+        }       
     }
 }
 
