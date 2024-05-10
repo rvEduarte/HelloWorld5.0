@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 210671967}
   - component: {fileID: 210671966}
   - component: {fileID: 210671965}
+  - component: {fileID: 210671968}
   m_Layer: 0
   m_Name: BoxColliderMove
   m_TagString: GROUNDER
@@ -405,16 +406,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletHelloWrite: {fileID: 0}
   canvasText: {fileID: 424245737}
-  resetCounter: {fileID: 0}
   disableBox2d: {fileID: 210671966}
   Counter1: {fileID: 210671965}
   Laser1: {fileID: 1900138152}
   Laser2: {fileID: 1590893476}
   Laser3: {fileID: 26011821}
-  L1: 1
-  L2: 1
-  L3: 1
   BlueAlarm: {fileID: 802650966}
+  BoolLaser1: {fileID: 210671968}
+  BoolLaser2: {fileID: 210671968}
+  BoolLaser3: {fileID: 210671968}
+--- !u!114 &210671968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210671963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b23a58cfebec34ba9eb009c63afa73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  La1: 1
+  La2: 1
+  La3: 1
 --- !u!1 &234031961
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,16 +834,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletHelloWrite: {fileID: 6780273579018449241, guid: 5f371dc691e971448b21f1a9f2093cb3, type: 3}
   canvasText: {fileID: 424245737}
-  resetCounter: {fileID: 0}
   disableBox2d: {fileID: 0}
   Counter1: {fileID: 0}
   Laser1: {fileID: 0}
   Laser2: {fileID: 0}
   Laser3: {fileID: 0}
-  L1: 1
-  L2: 1
-  L3: 1
   BlueAlarm: {fileID: 0}
+  BoolLaser1: {fileID: 0}
+  BoolLaser2: {fileID: 0}
+  BoolLaser3: {fileID: 0}
 --- !u!1 &397735395
 GameObject:
   m_ObjectHideFlags: 0
