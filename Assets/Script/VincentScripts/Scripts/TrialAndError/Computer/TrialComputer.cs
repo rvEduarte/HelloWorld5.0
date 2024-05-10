@@ -283,23 +283,41 @@ public class TrialComputer : MonoBehaviour
                 Debug.Log("SUPER_FUCK");
 
                 //MOVE THE COLLIDER TO TOP
-                disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
-                disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
+                
 
-                Laser1.SetActive(true);
-                Laser2.SetActive(true);
-                Laser3.SetActive(true);
-
-                BoolLaser1.La1 = true;
-                BoolLaser2.La2 = true;
-                BoolLaser3.La3 = true;
-
-                BlueAlarm.SetActive(false);
+               // BlueAlarm.SetActive(false);
 
                 //BlueAlarm.SetActive(true);
 
-                canvasText.text = "__";
-                Counter1.counter = 0;
+                
+
+                if (BoolLaser1.La1.Equals(BoolLaser2.La2) && BoolLaser2.La2.Equals(BoolLaser3.La3))
+                // if(TITE.Equals(PEPE) && PEPE.Equals(TEPE))
+                {
+                    Debug.Log("KANTOTERO");
+
+                }
+                else
+                {
+                    Debug.Log("HINDE__KANTOTERO");
+                    BlueAlarm.SetActive(true);
+
+                    disableBox2d.GetComponent<BoxCollider2D>().offset = new Vector2(-9, 0);
+                    disableBox2d.GetComponent<BoxCollider2D>().size = new Vector2((float)0.1, (float)16.8);
+
+                    Laser1.SetActive(true);
+                    Laser2.SetActive(true);
+                    Laser3.SetActive(true);
+
+                    BoolLaser1.La1 = true;
+                    BoolLaser2.La2 = true;
+                    BoolLaser3.La3 = true;
+
+                    canvasText.text = "__";
+                    Counter1.counter = 0;
+                }
+
+                
             }
             
 
@@ -326,7 +344,7 @@ public class TrialComputer : MonoBehaviour
                 BoolLaser2.La2 = true;
                 BoolLaser3.La3 = true;
 
-                BlueAlarm.SetActive(false);
+                //BlueAlarm.SetActive(false);
 
                 canvasText.text = "__";
                 Counter1.counter = 0;
@@ -355,7 +373,7 @@ public class TrialComputer : MonoBehaviour
                 BoolLaser2.La2 = true;
                 BoolLaser3.La3 = true;
 
-                BlueAlarm.SetActive(false);
+                //BlueAlarm.SetActive(false);
 
                 canvasText.text = "__";
                 Counter1.counter = 0;
@@ -384,7 +402,7 @@ public class TrialComputer : MonoBehaviour
                 BoolLaser2.La2 = true;
                 BoolLaser3.La3 = true;
 
-                BlueAlarm.SetActive(false);
+                //BlueAlarm.SetActive(false);
 
                 canvasText.text = "__";
                 Counter1.counter = 0;
