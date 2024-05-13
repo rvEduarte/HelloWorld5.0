@@ -7,9 +7,11 @@ using TMPro;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+  
     public TMP_Dropdown graphicsDropdown;
     public Slider masterVol, musicVol, sfxVol;
     public AudioMixer settingAudioMixer;
+
 
 
     public void ChangeGraphicsQuality()
@@ -32,11 +34,15 @@ public class NewBehaviourScript : MonoBehaviour
         settingAudioMixer.SetFloat("MyExposedParam 2", sfxVol.value);
     }
 
+   public void OpenLin(string link)
+    {
+        Application.OpenURL(link);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
