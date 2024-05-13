@@ -31,6 +31,8 @@ public class TrialButtonCircle : MonoBehaviour
     public bool clicked = true;
     public bool condition;
 
+    public CanvasRenderer rightFire;
+
     void Start()
     {
 
@@ -94,6 +96,9 @@ public class TrialButtonCircle : MonoBehaviour
 
             CanvasRenderer canvasRenderer16 = yourHint.GetComponent<CanvasRenderer>();
             canvasRenderer16.cull = true;
+
+            CanvasRenderer canvasRenderer17 = rightFire.GetComponent<CanvasRenderer>();
+            canvasRenderer17.cull = true;
         }
         else if (clicked == false)
         {
@@ -148,6 +153,9 @@ public class TrialButtonCircle : MonoBehaviour
 
             CanvasRenderer canvasRenderer16 = yourHint.GetComponent<CanvasRenderer>();
             canvasRenderer16.cull = false;
+
+            CanvasRenderer canvasRenderer17 = rightFire.GetComponent<CanvasRenderer>();
+            canvasRenderer17.cull = false;
         }
 
         
