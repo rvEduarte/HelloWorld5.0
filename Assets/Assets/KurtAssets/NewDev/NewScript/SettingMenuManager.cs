@@ -12,6 +12,11 @@ public class NewBehaviourScript : MonoBehaviour
     public Slider masterVol, musicVol, sfxVol;
     public AudioMixer settingAudioMixer;
 
+    [SerializeField] Image soundOnIcon;
+    [SerializeField] Image soundOffIcon;
+    private bool muted = false;
+
+
 
 
     public void ChangeGraphicsQuality()
@@ -39,14 +44,69 @@ public class NewBehaviourScript : MonoBehaviour
         Application.OpenURL(link);
     }
 
+
+    public void OnButtonPress()
+    {
+        if (muted == false)
+        {
+            muted = true;
+            AudioListener.pause = true;
+        }
+        else
+        {
+            muted = false;
+            AudioListener.pause = false;
+        }
+
+        Save();
+        UpdateButtonIcon();
+    }
+
+    private void UpdateButtonIcon()
+    {
+        if (muted == false)
+        {
+            soundOnIcon.enabled = true;
+            soundOffIcon.enabled = false;
+        }
+        else
+        {
+            soundOnIcon.enabled = false;
+            soundOffIcon.enabled = true;
+        }
+    }
+
+
+    private void Load()
+    {
+        muted = PlayerPrefs.GetInt("muted") == 1;
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("muted", muted ? 1 : 0);
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        if (!PlayerPrefs.HasKey("muted"))
+        {
+            PlayerPrefs.SetInt("muted", 0);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
+        UpdateButtonIcon();
+        AudioListener.pause = muted;
     }
 
-    // Update is called once per frame
-    void Update()
+        // Update is called once per frame
+        void Update()
     {
         
     }
