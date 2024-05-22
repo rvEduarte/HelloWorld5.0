@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class FinishPointScript : MonoBehaviour
 {
+
+    [SerializeField] GameObject gameCompletion;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            //go to next Level
-            SceneControllerScript.instance.NextLevel();
+            gameCompletion.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
