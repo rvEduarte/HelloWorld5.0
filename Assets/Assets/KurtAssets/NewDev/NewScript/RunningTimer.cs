@@ -21,4 +21,10 @@ public class RunningTimer : MonoBehaviour
         timerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    public void Paused()
+    {
+        Time.timeScale = 0f;
+        Debug.Log("Test");
+    }
+
 }

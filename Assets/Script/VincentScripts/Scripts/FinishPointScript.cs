@@ -12,7 +12,7 @@ public class FinishPointScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             gameCompletion.SetActive(true);
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
         }
     }
 }
