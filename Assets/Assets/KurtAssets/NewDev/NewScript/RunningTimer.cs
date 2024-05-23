@@ -12,19 +12,16 @@ public class RunningTimer : MonoBehaviour
  
     float elapsedTime;
 
+    [SerializeField] private Pause pauseMenu;
   
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        int minutes = Mathf.FloorToInt(elapsedTime / 60);
-        int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        timerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (!pauseMenu.pause)
+        {
+            elapsedTime += Time.deltaTime;
+            int minutes = Mathf.FloorToInt(elapsedTime / 60);
+            int seconds = Mathf.FloorToInt(elapsedTime % 60);
+            timerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
     }
-
-    public void Paused()
-    {
-        Time.timeScale = 0f;
-        Debug.Log("Test");
-    }
-
 }

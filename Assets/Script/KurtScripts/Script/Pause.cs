@@ -1,36 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    [SerializeField] public GameObject PauseMenuPanel;
-    [SerializeField] public GameObject PlayerPlayPanel;
+    [SerializeField] public GameObject pauseMenuPanel;
+    [SerializeField] public GameObject playerPlayPanel;
+
+    public bool pause;
 
     private void Start()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
     }
 
-
-    public void PauseMenu()
+    private void Update()
     {
-	    Time.timeScale = 1f;
-        PauseMenuPanel.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pause = !pause;
+        }
+
+        if (pause)
+        {
+            pauseMenuPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        else
+        {
+            pauseMenuPanel.SetActive(false);
+            Time.timeScale = 1;       
+        }
     }
 
-    public void Restart()
+    public void PauseResumeRestart(int id)
     {
-        Time.timeScale = 1f;
-        //SceneManager.LoadScene("Level1_Ph1");
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
-    }
-
-
-    public void Resume()
-    {       PlayerPlayPanel.SetActive(false);
-            Time.timeScale = 1f;
+        if (id == 0)
+        {
+            pause = true;
+        }
+        else if (id == 1)
+        {
+            pause = false;
+        }
+        else
+        {
+            SceneManager.LoadSceneAsync(4);
+        }
     }
 }
