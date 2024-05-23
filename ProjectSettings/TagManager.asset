@@ -10,6 +10,7 @@ TagManager:
   - W7
   - WL7
   - GROUNDER
+  - respawn
   layers:
   - Default
   - TransparentFX
