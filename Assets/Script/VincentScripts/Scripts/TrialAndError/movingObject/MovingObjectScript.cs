@@ -6,7 +6,8 @@ public class MovingObjectScript : MonoBehaviour
 {
 
     public Transform posA, posB;
-    public float moveSpeedObject = 2f;
+    public float moveSpeedObject = 9.5f;
+    
 
     private Vector3 nextPosition;
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public class MovingObjectScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.transform.parent = transform;
+            
         }
     }
 
