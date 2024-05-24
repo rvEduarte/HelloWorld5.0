@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 186589594}
   - component: {fileID: 186589593}
   - component: {fileID: 186589592}
+  - component: {fileID: 186589595}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -387,7 +388,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 186589593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 734489253}
+        m_TargetAssemblyTypeName: AnswersScript, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &186589593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +439,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186589590}
   m_CullTransparentMesh: 1
+--- !u!114 &186589595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186589590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c605262d79008934ea6ed7be888266de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCorrect: 0
+  quizManager: {fileID: 1770632482}
 --- !u!1 &194239627
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +794,7 @@ GameObject:
   - component: {fileID: 734489252}
   - component: {fileID: 734489251}
   - component: {fileID: 734489250}
+  - component: {fileID: 734489253}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -837,7 +865,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 734489251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 734489253}
+        m_TargetAssemblyTypeName: AnswersScript, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &734489251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,6 +916,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734489248}
   m_CullTransparentMesh: 1
+--- !u!114 &734489253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734489248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c605262d79008934ea6ed7be888266de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCorrect: 0
+  quizManager: {fileID: 1770632482}
 --- !u!1 &758434951
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +962,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1035346940}
+  - {fileID: 1770632481}
   m_Father: {fileID: 5751899830723381426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -990,6 +1045,7 @@ GameObject:
   - component: {fileID: 768773540}
   - component: {fileID: 768773539}
   - component: {fileID: 768773538}
+  - component: {fileID: 768773541}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1060,7 +1116,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 768773539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 734489253}
+        m_TargetAssemblyTypeName: AnswersScript, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &768773539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,6 +1167,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768773536}
   m_CullTransparentMesh: 1
+--- !u!114 &768773541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768773536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c605262d79008934ea6ed7be888266de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCorrect: 0
+  quizManager: {fileID: 1770632482}
 --- !u!1 &848889320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1129232889}
   m_Layer: 0
-  m_Name: objectMoving
+  m_Name: OBJECTMOVING
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,6 +1576,7 @@ GameObject:
   - component: {fileID: 1252011117}
   - component: {fileID: 1252011116}
   - component: {fileID: 1252011115}
+  - component: {fileID: 1252011118}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1564,7 +1647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1252011116}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 734489253}
+        m_TargetAssemblyTypeName: AnswersScript, Assembly-CSharp
+        m_MethodName: Answer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1252011116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,6 +1698,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252011113}
   m_CullTransparentMesh: 1
+--- !u!114 &1252011118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252011113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c605262d79008934ea6ed7be888266de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCorrect: 0
+  quizManager: {fileID: 1770632482}
 --- !u!1 &1359715445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,6 +2142,79 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.83, y: 35.86}
   m_EdgeRadius: 0
+--- !u!1 &1770632480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1770632481}
+  - component: {fileID: 1770632482}
+  m_Layer: 0
+  m_Name: QUIZ MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1770632481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770632480}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -131.2345, y: 30.203064, z: 0.19968966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 758434952}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1770632482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770632480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffe2b36a47cf524fabf3845da426028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QnA:
+  - Questions: Tite si karl?
+    Answers:
+    - Oo
+    - Pwede
+    - Hinde
+    - Sige
+    CorrestAnswer: 0
+  - Questions: Pepe si Karl?
+    Answers:
+    - Oo
+    - Pwede
+    - Hinde
+    - Sige
+    CorrestAnswer: 3
+  - Questions: Chupol Si Karl
+    Answers:
+    - Oo
+    - Pwede
+    - Hinde
+    - Sige
+    CorrestAnswer: 2
+  options:
+  - {fileID: 734489248}
+  - {fileID: 186589590}
+  - {fileID: 1252011113}
+  - {fileID: 768773536}
+  currentQuestion: 0
+  QuestionTxt: {fileID: 1359715447}
 --- !u!1 &2044092467
 GameObject:
   m_ObjectHideFlags: 0
@@ -40061,6 +40243,7 @@ Transform:
   - {fileID: 5751899830723381426}
   - {fileID: 8717187508138191230}
   - {fileID: 7183797813569855327}
+  - {fileID: 2616934164240961132}
   m_Father: {fileID: 570305754332757813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2384509362182234905
@@ -40290,12 +40473,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332431716331214245}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 129.66, y: 14.33, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 133.45801, y: 13.863001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2380869578367792748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2645704726979826475
 Animator:
@@ -93269,5 +93452,4 @@ SceneRoots:
   - {fileID: 570305754332757813}
   - {fileID: 1129232889}
   - {fileID: 454717937}
-  - {fileID: 2616934164240961132}
   - {fileID: 3259666920334855808}
