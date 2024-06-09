@@ -45,7 +45,7 @@ public class TrialButtonCircle : MonoBehaviour
 
         if (clicked == true)
         {
-            Debug.Log("HIDE");
+            //Debug.Log("HIDE");
             CanvasRenderer canvasRenderer1 = yourDraggable1.GetComponent<CanvasRenderer>();
             canvasRenderer1.cull = true;
 
@@ -102,7 +102,7 @@ public class TrialButtonCircle : MonoBehaviour
         }
         else if (clicked == false)
         {
-            Debug.Log("SHOW");
+            //Debug.Log("SHOW");
             CanvasRenderer canvasRenderer1 = yourDraggable1.GetComponent<CanvasRenderer>();
             canvasRenderer1.cull = false;
 
@@ -163,7 +163,7 @@ public class TrialButtonCircle : MonoBehaviour
 
     void TaskOnClick()
     {
-        Debug.Log("You have clicked the buttonCircle!");
+        //Debug.Log("You have clicked the buttonCircle!");
 
 
 

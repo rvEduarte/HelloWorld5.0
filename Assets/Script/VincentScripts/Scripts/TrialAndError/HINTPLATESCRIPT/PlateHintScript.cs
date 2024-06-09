@@ -10,18 +10,24 @@ public class PlateHintScript : MonoBehaviour
 
     public GameObject HintPanel;
 
+    public bool inside = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        HintPanel.SetActive(false);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (inside = true)
         {
-            HintPanel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                HintPanel.SetActive(true);
+                Debug.Log("TITE SI KARL");
+            }
         }
     }
 
@@ -29,8 +35,11 @@ public class PlateHintScript : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player2.0"))
         {
+            
             EXLA.SetActive(false);
             Hint.SetActive(true);
+
+            inside = true;
         }
     }
 

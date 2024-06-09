@@ -9,15 +9,15 @@ public class DisableFire : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public GameObject shooting;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(buttonPressed == true)
         {
-            Debug.Log("Disable shooting");
+            //Debug.Log("Disable shooting");
             shooting.SetActive(false);
         }else
         {
-            Debug.Log("Enable shooting");
+            //Debug.Log("Enable shooting");
             shooting.SetActive(true);
         }
     }
