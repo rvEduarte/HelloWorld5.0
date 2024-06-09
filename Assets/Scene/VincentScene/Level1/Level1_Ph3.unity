@@ -4061,6 +4061,7 @@ MonoBehaviour:
   posA: {fileID: 8999681856533572208}
   posB: {fileID: 4100307477770969241}
   moveSpeedObject: 3
+  body: {fileID: 7480673587006878551}
 --- !u!222 &484934235132105224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51097,6 +51098,7 @@ MonoBehaviour:
   posA: {fileID: 3561190421802154896}
   posB: {fileID: 8460467958858576249}
   moveSpeedObject: 3
+  body: {fileID: 7480673587006878551}
 --- !u!1 &5425729946872529499
 GameObject:
   m_ObjectHideFlags: 0
@@ -54107,6 +54109,7 @@ MonoBehaviour:
   posA: {fileID: 2475550169086402392}
   posB: {fileID: 7374810249247659441}
   moveSpeedObject: 3
+  body: {fileID: 7480673587006878551}
 --- !u!1 &6350405337187516869
 GameObject:
   m_ObjectHideFlags: 0
@@ -92291,6 +92294,7 @@ MonoBehaviour:
   posA: {fileID: 561308538940213569}
   posB: {fileID: 4884248620249924520}
   moveSpeedObject: 3
+  body: {fileID: 7480673587006878551}
 --- !u!114 &9105701025243457037
 MonoBehaviour:
   m_ObjectHideFlags: 3

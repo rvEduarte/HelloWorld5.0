@@ -21,7 +21,7 @@ public class PlateHintScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (inside = true)
+        if (inside == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -49,6 +49,8 @@ public class PlateHintScript : MonoBehaviour
         {
             Hint.SetActive(false);
             HintPanel.SetActive(false);
+            inside = false;
+
         }
     }
 }

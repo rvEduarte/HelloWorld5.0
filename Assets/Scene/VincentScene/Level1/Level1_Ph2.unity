@@ -1656,6 +1656,7 @@ MonoBehaviour:
   posA: {fileID: 2706144021275114657}
   posB: {fileID: 4311350745346385790}
   moveSpeedObject: 3
+  body: {fileID: 5098230405016979081}
 --- !u!1 &526376533291598470
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,7 +7282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2687102395436778744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37353,6 +37354,7 @@ MonoBehaviour:
   EXLA: {fileID: 3548911055954922997}
   Hint: {fileID: 5634320498715689993}
   HintPanel: {fileID: 2674732245946580342}
+  inside: 0
 --- !u!1 &4009626779755345959
 GameObject:
   m_ObjectHideFlags: 0
@@ -56420,6 +56422,7 @@ MonoBehaviour:
   posA: {fileID: 3300570413354961969}
   posB: {fileID: 3817059785667186228}
   moveSpeedObject: 3
+  body: {fileID: 5098230405016979081}
 --- !u!212 &6174415297374059254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71245,6 +71248,7 @@ MonoBehaviour:
   posA: {fileID: 4416752734389029362}
   posB: {fileID: 8577110950461152069}
   moveSpeedObject: 3
+  body: {fileID: 5098230405016979081}
 --- !u!1 &8835469201259431937
 GameObject:
   m_ObjectHideFlags: 0
@@ -92878,6 +92882,7 @@ MonoBehaviour:
   posA: {fileID: 7869795053903474795}
   posB: {fileID: 4969563324638932902}
   moveSpeedObject: 3
+  body: {fileID: 5098230405016979081}
 --- !u!199 &9172945970952739938
 ParticleSystemRenderer:
   serializedVersion: 6

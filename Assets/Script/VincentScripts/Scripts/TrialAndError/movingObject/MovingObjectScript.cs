@@ -7,7 +7,8 @@ public class MovingObjectScript : MonoBehaviour
 
     public Transform posA, posB;
     public float moveSpeedObject = 9.5f;
-    
+
+    public Rigidbody2D body;
 
     private Vector3 nextPosition;
     // Start is called before the first frame update
@@ -32,7 +33,8 @@ public class MovingObjectScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.transform.parent = transform;
-            
+            //body = GetComponent<Rigidbody2D>();
+            body.interpolation = RigidbodyInterpolation2D.None;
         }
     }
 
@@ -41,6 +43,7 @@ public class MovingObjectScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.transform.parent = null;
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
         }
     }
 }
